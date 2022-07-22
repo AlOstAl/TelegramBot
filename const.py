@@ -5,6 +5,8 @@ URL = 'https://api.telegram.org/bot{token}/{method}'
 
 MY_ID = '508461259'
 
+MY_CITY = "Dnipro"
+
 UPDATE_METH = 'getUpdates'
 SEND_METH = 'sendMessage'
 

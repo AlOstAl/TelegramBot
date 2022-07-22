@@ -10,7 +10,6 @@ def main():
     url = const.URL.format(token=const.TOKEN, method=const.UPDATE_METH)
     content = requests.get(url)
     data = json.loads(content.text)
-    # print(data)
     return parsing_data(data)
 
 
