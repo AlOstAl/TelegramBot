@@ -10,7 +10,6 @@ bot = telebot.TeleBot(const.TOKEN)
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
-    # bot.reply_to(message, f'Hello, {message.from_user.first_name}!')
     bot.send_message(message.chat.id, f'Hello, *{message.from_user.first_name}*\!', parse_mode='MarkdownV2')
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     item1 = types.KeyboardButton('My city')
@@ -49,7 +48,7 @@ def parsing_weather_data(w_data):
     temp_c = round(w_data['main']['temp'] - 273.5, 2)
     weather = w_data['weather'][0]['description']
     # weather_icon = w_data['weather'][0]['icon']
-    # weather_icon = const.WEATHER_ICON + w_data['weather']['icon'] + '.png'
+    # weather_icon = const.WEATHER_ICON + w_data['weather'][0]['icon'] + '.png'
     weather_icon = '\U000026c5'
     wind = w_data['wind']['speed']
     # ℉ =(K - 273.15) * 1.8000 + 32.00
@@ -62,3 +61,7 @@ def parsing_weather_data(w_data):
 
 
 bot.infinity_polling()
+
+# add log
+# try sqlite
+# scale
