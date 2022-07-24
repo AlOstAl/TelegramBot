@@ -1,6 +1,6 @@
-ApiKey = '7e8795a3a299195087b194ceb9cc6734'
+ApiKey = '****'
 
-TOKEN = '5507251593:AAFnVsOPxye5SPQ6z7nl-Qm0YL6KJ3Z_f_M'
+TOKEN = '****'
 URL = 'https://api.telegram.org/bot{token}/{method}'
 
 MY_ID = '508461259'
